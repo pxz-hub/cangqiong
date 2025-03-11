@@ -28,4 +28,8 @@ public interface EmployeeMapper {
 
 @ApiOperation("修改员工")
     void update(Employee employee);
+
+@ApiOperation("根据ID查询员工信息")
+@Select("select * from employee where id = #{id}")
+    Employee getById(long id);
 }

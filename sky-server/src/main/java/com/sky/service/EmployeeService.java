@@ -24,4 +24,9 @@ public interface EmployeeService {
 
     @ApiOperation("启用和禁用账号")
     void StatusOrStop(Integer status, Long id);
+
+    @ApiOperation("根据ID查询数据")
+    Employee getById(long id);
+
+    void update(EmployeeDTO employeeDTO);
 }
